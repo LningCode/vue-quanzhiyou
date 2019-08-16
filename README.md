@@ -31,10 +31,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 # 目录结构
-# assets 静态资源文件，存放图片，js等
-# components 常用公共组件，弹窗等。。。
-# directive 常用公共指令封装
-# page 视图页面
-# router 路由
-# store vuex状态管理
-# utils 常用工具类
+> assets 静态资源文件，存放图片，js等
+> components 常用公共组件，弹窗等。。。
+> directive 常用公共指令封装
+> page 视图页面
+> router 路由
+> store vuex状态管理
+> utils 常用工具类

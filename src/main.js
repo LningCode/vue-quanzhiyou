@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui';
+import environments from '../config/env';
 
+Vue.prototype.environments = environments;
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 

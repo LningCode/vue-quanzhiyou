@@ -6,7 +6,9 @@ import router from './router'
 import ElementUI from 'element-ui';
 import environments from '../config/env';
 
+// 环境全局配置
 Vue.prototype.environments = environments;
+
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 

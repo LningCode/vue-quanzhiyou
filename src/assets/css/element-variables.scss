@@ -1,0 +1,21 @@
+.login-main .el-tabs__header{
+    width: 220px;
+    margin: 0 auto 30px auto;
+}
+.login-main .el-tabs__item{
+    font-size: 18px;
+    font-weight: bold;
+}
+.login-main .el-input--small .el-input__inner{
+    height: 36px;
+    line-height: 36px;
+}
+.login-main .el-tabs__nav-wrap::after{
+    content: initial;
+}
+.login-main .el-button{
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+}

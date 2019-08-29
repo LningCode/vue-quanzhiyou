@@ -1,21 +1,26 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <router-link to="/login">登录注册</router-link>
+    <head-nav></head-nav>123
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import HeadNav from "@/views/share/HeadNav";
+import AppFooter from "@/views/share/AppFooter";
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  components: {
+    HeadNav,
+    AppFooter
+  },
+  data() {
     return {
-      msg: 'Welcome to Your Qaunzy App'
-    }
+      msg: "Welcome to Your Qaunzy App"
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-
 </style>

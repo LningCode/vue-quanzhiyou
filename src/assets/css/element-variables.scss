@@ -1,21 +1,36 @@
-.login-main .el-tabs__header{
-    width: 220px;
-    margin: 0 auto 30px auto;
+.login-main .el-tabs__header {
+  width: 220px;
+  margin: 0 auto 30px auto;
 }
-.login-main .el-tabs__item{
-    font-size: 18px;
-    font-weight: bold;
+.login-main .el-tabs__item {
+  font-size: 18px;
+  font-weight: bold;
 }
-.login-main .el-input--small .el-input__inner{
-    height: 36px;
-    line-height: 36px;
+.login-main .el-input--small .el-input__inner {
+  height: 36px;
+  line-height: 36px;
 }
-.login-main .el-tabs__nav-wrap::after{
-    content: initial;
+.login-main .el-tabs__nav-wrap::after {
+  content: initial;
 }
-.login-main .el-button{
-    width: 100%;
-    margin-left: 0;
-    padding: 10px 15px;
-    font-size: 14px;
+.login-main .el-button {
+  width: 100%;
+  margin-left: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.headnav .menu-search .el-input--small .el-input__inner {
+  height: 36px;
+  line-height: 36px;
+}
+.headnav .input-with-select .el-input-group__append {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.headnav .input-with-select .el-input-group__prepend {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.headnav .menu-search .el-input-group__prepend .el-input__inner {
+  width: 75px;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="forgot">
-    <header class="header container">
+    <header class="header container text-center">
       <router-link class="logo" to="/login">
         <img width="80" src="../../assets/images/logo.png" alt="">
       </router-link>
@@ -44,6 +44,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.header{
+  padding-top: 65px;
+}
+.header .desc{
+  color: #424242;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
 .form-group{
   margin-top: 15px;
 }

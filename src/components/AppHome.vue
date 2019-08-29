@@ -8,11 +8,13 @@
 <script>
 import HeadNav from "@/views/share/HeadNav";
 import AppFooter from "@/views/share/AppFooter";
+import Article from "@/views/article/Article";
 export default {
-  name: "HelloWorld",
+  name: "AppHome",
   components: {
     HeadNav,
-    AppFooter
+    AppFooter,
+    Article
   },
   data() {
     return {

@@ -1,8 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
-import HelloWorld from "@/components/HelloWorld";
+import AppHome from "@/components/AppHome";
 import componentsRouter from "@/router/components";
-import shareRouter from "@/router/share";
 
 Vue.use(Router);
 
@@ -10,10 +9,16 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "HelloWorld",
-      component: HelloWorld
+      name: "AppHome",
+      component: AppHome,
+      children: [
+        {
+          path: "/article",
+          name: "Article",
+          component: () => import("@/views/article/index")
+        }
+      ]
     },
-    ...componentsRouter,
-    ...shareRouter
+    ...componentsRouter
   ]
 });

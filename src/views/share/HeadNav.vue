@@ -6,10 +6,12 @@
       :default-active="activeIndex"
       mode="horizontal"
       text-color="#8A4182"
-    >
-      <el-menu-item class="logo">
+      @select="handleSelect"
+    > 
+      <el-menu-item index="/" class="logo">
         <img width="50" src="../../assets/images/logo.png" alt />
       </el-menu-item>
+      <el-menu-item index="/">首页</el-menu-item>
       <el-menu-item index="/video">视频</el-menu-item>
       <el-menu-item index="/answers">问答</el-menu-item>
       <el-menu-item index="/resource">资源</el-menu-item>
@@ -36,12 +38,22 @@ export default {
   name: "HelloHeader",
   data() {
     return {
-      activeIndex: "1",
+      activeIndex: "/video",
       input5: "",
       select: ""
     };
   },
-  methods: {}
+  methods: {
+    handleSelect(key, keyPath) {
+      if(key == '/') this.activeIndex = '/headnull';
+    },
+    linkViews() {
+      console.log(1)
+    }
+  },
+  created() {
+    console.log(this.$router.history.current.path) 
+  }
 };
 </script>
 

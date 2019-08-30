@@ -61,6 +61,9 @@ export default {
 }
 .headnav-menu {
   border-bottom: none;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .headnav {
   border-bottom: solid 1px #e6e6e6;

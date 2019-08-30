@@ -1,15 +1,23 @@
 <template>
   <div class="wraper martop-65 tagall">
-    <el-breadcrumb class="list-header" separator>
-      <el-breadcrumb-item class="active">全部标签</el-breadcrumb-item>
-      <el-breadcrumb-item>最热</el-breadcrumb-item>
-      <el-breadcrumb-item>最新</el-breadcrumb-item>
-      <el-breadcrumb-item>
-        <el-input class="input" placeholder="请输入内容" v-model="tagValue" clearable></el-input>
-      </el-breadcrumb-item>
+    <el-breadcrumb class="bread" separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>视频</el-breadcrumb-item>
+      <el-breadcrumb-item>视频列表</el-breadcrumb-item>
     </el-breadcrumb>
-
-    <el-row class="video-item">
+    <el-row class="filter-wraper">
+      <el-col :span="2">
+        <span class="filter-title">分类 :</span>
+      </el-col>
+      <el-col :span="22" class="filter-item">
+        <el-tag>标签一</el-tag>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="12">2</el-col>
+      <el-col :span="12">3</el-col>
+    </el-row>
+    <!-- <el-row class="video-item">
       <el-col class="item" v-for="item in 10" :key="item" :span="8">
         <div class="wrap">
           <img class="cover" src="../../assets/images/video.png" alt="180" />
@@ -27,7 +35,7 @@
           </div>
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
   </div>
 </template>
 
@@ -44,6 +52,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.bread{
+  padding: 30px 0;
+  font-size: 16px;
+}
+.filter-wraper{
+
+}
 .video-item {
   .item {
     padding: 0 10px 20px;
@@ -79,10 +94,14 @@ export default {
       font-size: 13px;
       margin-top: 10px;
       line-height: 1.4;
-      -webkit-line-clamp: 2;
       overflow: hidden;
-      text-overflow: ellipsis;
       word-wrap: break-word;
+      text-overflow: -o-ellipsis-lastline;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
     .info-wrapper {
       padding: 15px 10px;

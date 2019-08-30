@@ -5,19 +5,29 @@
       <el-breadcrumb-item>视频</el-breadcrumb-item>
       <el-breadcrumb-item>视频列表</el-breadcrumb-item>
     </el-breadcrumb>
-    <el-row class="filter-wraper">
-      <el-col :span="2">
-        <span class="filter-title">分类 :</span>
-      </el-col>
-      <el-col :span="22" class="filter-item">
-        <el-tag>标签一</el-tag>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="12">2</el-col>
-      <el-col :span="12">3</el-col>
-    </el-row>
-    <!-- <el-row class="video-item">
+    <div class="filter-wraper">
+      <el-row>
+        <el-col :span="2">
+          <span class="filter-title">分类 :</span>
+        </el-col>
+        <el-col :span="22" class="filter-item">
+          <el-button class="tag active" round v-for="i in 15" :key="i">分类 {{i}}</el-button>
+        </el-col>
+        <el-col :span="2">
+          <span class="filter-title">标签 :</span>
+        </el-col>
+        <el-col :span="22" class="filter-item">
+          <el-button class="tag" round v-for="i in 15" :key="i">标签 {{i}}</el-button>
+        </el-col>
+        <el-col :span="24" class="filter-group">
+          <el-button class="btn active">全部</el-button>
+          <el-button class="btn">最热</el-button>
+          <el-button class="btn">最新</el-button>
+        </el-col>
+      </el-row>
+    </div>
+
+    <el-row class="video-item">
       <el-col class="item" v-for="item in 10" :key="item" :span="8">
         <div class="wrap">
           <img class="cover" src="../../assets/images/video.png" alt="180" />
@@ -35,7 +45,7 @@
           </div>
         </div>
       </el-col>
-    </el-row> -->
+    </el-row>
   </div>
 </template>
 
@@ -53,13 +63,52 @@ export default {
 
 <style scoped lang="scss">
 .bread{
-  padding: 30px 0;
+  padding: 30px 10px;
   font-size: 16px;
 }
 .filter-wraper{
-
+  margin-left: 10px;
+  margin-right: 11px;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  .filter-title{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .tag{
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    font-size: 15px;
+    padding: 7px 12px;
+  }
+  .tag.active,.tag:hover{
+    border: 1px solid #8a4182;
+    color: #fff;
+    background: #8a4182;
+  }
+}
+.filter-group{
+  border-top: 1px solid #ebeef5;
+  padding-top: 20px;
+  margin-top: 10px;
+  .btn{
+    font-size: 15px;
+  }
+  .btn.active{
+    color: #8a4182;
+    border: 1px solid #8a4182;
+  }
 }
 .video-item {
+  margin-top: 35px;
   .item {
     padding: 0 10px 20px;
     .wrap {

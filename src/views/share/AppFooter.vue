@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <section class="sitemap">
+    <!-- <section class="sitemap">
       <a href="/" class="nav-home">
         <img src="../../assets/images/logo.png" alt="Jest" width="66" height="58" />
       </a>
@@ -22,8 +22,8 @@
         <a href="#">GitHub</a>
         <span></span>
       </div>
-    </section>
-    <section class="copyright">Copyright © 2018 Facebook Inc.</section>
+    </section>-->
+    <section class="copyright">Copyright © 2018 - 2019 Qaunzy Inc.</section>
   </footer>
 </template>
 
@@ -59,6 +59,7 @@ export default {
 .copyright {
   color: hsla(0, 0%, 100%, 0.4);
   text-align: center;
+  font-size: 16px;
 }
 .nav-home {
   display: table;

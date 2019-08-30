@@ -1,64 +1,72 @@
 $color: red;
-@mixin border($px,$orange,$blue){
-    :host-context([theme-style="_orange"]) & {
-        border: $px solid $orange;
-    }
-    :host-context([data-theme-style="_blue"]) & {
-        border: $px solid $blue;
-    }
+@mixin border($px, $orange, $blue) {
+  :host-context([theme-style="_orange"]) & {
+    border: $px solid $orange;
+  }
+  :host-context([data-theme-style="_blue"]) & {
+    border: $px solid $blue;
+  }
 }
 
-.container{
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.pull-left{
-    float: left !important;
+.pull-left {
+  float: left !important;
 }
-.pull-right{
-    float: right !important;
+.pull-right {
+  float: right !important;
 }
-.text-left{
-    text-align: left !important;
+.text-left {
+  text-align: left !important;
 }
-.text-right{
-    text-align: right !important;
+.text-right {
+  text-align: right !important;
 }
-.text-center{
-    text-align: center !important;
+.text-center {
+  text-align: center !important;
 }
-a:hover{
-    text-decoration: underline;
+a:hover {
+  text-decoration: underline;
 }
-.martop-10{
-    margin-top: 10px !important;
+.martop-10 {
+  margin-top: 10px !important;
 }
-.w-50{
-    width: 50% !important;
+.martop-65 {
+  margin-top: 65px !important;
 }
-.w-30{
-    width: 30% !important;
+.w-50 {
+  width: 50% !important;
 }
-.w-60{
-    width: 60% !important;
+.w-30 {
+  width: 30% !important;
 }
-
-@media (min-width: 1200px){
-    .container {
-        width: 1140px;
-    }
+.w-60 {
+  width: 60% !important;
 }
-
-@media (min-width: 992px){
-    .container {
-        width: 970px;
-    }
+.wraper {
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-@media (min-width: 768px){
-    .container {
-        width: 750px;
-    }
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }

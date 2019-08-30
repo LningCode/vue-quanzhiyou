@@ -34,3 +34,10 @@
 .headnav .menu-search .el-input-group__prepend .el-input__inner {
   width: 75px;
 }
+.tagall .el-breadcrumb__item.active .el-breadcrumb__inner {
+  color: #8a4182;
+}
+.tagall .el-input__inner {
+  height: 38px;
+  line-height: 38px;
+}

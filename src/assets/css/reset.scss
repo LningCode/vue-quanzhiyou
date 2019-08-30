@@ -1,14 +1,28 @@
-html,body{
-    padding: 0;
-    margin: 0;
-    height: 100%;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
-#app{height: 100%;}
-body{
-    font-size: 14px;
-    color: #333;
+#app {
+  height: 100%;
 }
-a{
-    text-decoration: none;
-    color: #8A4182;
+body {
+  font-size: 14px;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #8a4182;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }

@@ -1,10 +1,9 @@
 <template>
   <div class="wraper martop-65 tagall">
-    <el-breadcrumb class="bread" separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>视频</el-breadcrumb-item>
-      <el-breadcrumb-item>视频列表</el-breadcrumb-item>
-    </el-breadcrumb>
+    <div class="bread">
+      <bread-crumb :breadcrumbData="[{name: '首页',path: '/'},{name: '视频列表'}]"></bread-crumb>
+    </div>
+
     <div class="filter-wraper">
       <el-row>
         <el-col :span="2">
@@ -33,28 +32,48 @@
           <img class="cover" src="../../assets/images/video.png" alt="180" />
 
           <div class="info-wrapper">
-            <h6 class="course-name">Linux 基础入门（新版）</h6>
+            <h6 class="course-name" @click="$router.push({path: '/videoDetails'})">Linux 基础入门（新版）</h6>
             <div
               class="course-des"
             >要在实验楼愉快地学习，先要熟练地使用 Linux，本实验中通过在线动手实验的方式学习 Linux 常用命令，用户与权限管理，目录结构与文件操作，环境变量，计划任务，管道与数据流重定向等基本知识点。</div>
 
             <div class="recent clearfix">
+              <el-button
+                class="pull-left"
+                @click="$router.push({path: '/author'})"
+                type="mini"
+                icon="el-icon-user-solid"
+              >热鸡</el-button>
               <el-button class="pull-left" size="mini" icon="el-icon-view">1242</el-button>
-              <el-button class="pull-right" size="mini" type="primary" round>免费播放</el-button>
+              <el-button
+                @click="$router.push({path: '/videoDetails'})"
+                class="pull-right"
+                size="mini"
+                type="primary"
+                round
+              >免费播放</el-button>
             </div>
           </div>
         </div>
       </el-col>
     </el-row>
+
+    <div class="marbm-65">
+      <pag-ination :total="100" :pageSize="10"></pag-ination>
+    </div>
   </div>
 </template>
 
 <script>
+import BreadCrumb from "@/components/BreadCrumb";
+import PagInation from "@/components/PagInation";
 export default {
   data() {
-    return {
-      currentDate: new Date()
-    };
+    return {};
+  },
+  components: {
+    BreadCrumb,
+    PagInation
   },
   methods: {},
   created() {}
@@ -62,11 +81,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.bread{
-  padding: 30px 10px;
-  font-size: 16px;
+.bread {
+  padding-left: 10px;
 }
-.filter-wraper{
+.filter-wraper {
   margin-left: 10px;
   margin-right: 11px;
   padding: 20px;
@@ -77,11 +95,11 @@ export default {
   -moz-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
-  .filter-title{
+  .filter-title {
     font-size: 16px;
     font-weight: bold;
   }
-  .tag{
+  .tag {
     margin-left: 0;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -89,20 +107,21 @@ export default {
     font-size: 15px;
     padding: 7px 12px;
   }
-  .tag.active,.tag:hover{
+  .tag.active,
+  .tag:hover {
     border: 1px solid #8a4182;
     color: #fff;
     background: #8a4182;
   }
 }
-.filter-group{
+.filter-group {
   border-top: 1px solid #ebeef5;
   padding-top: 20px;
   margin-top: 10px;
-  .btn{
+  .btn {
     font-size: 15px;
   }
-  .btn.active{
+  .btn.active {
     color: #8a4182;
     border: 1px solid #8a4182;
   }
@@ -137,6 +156,7 @@ export default {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      cursor: pointer;
     }
     .course-des {
       height: 35px;

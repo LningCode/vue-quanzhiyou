@@ -26,9 +26,19 @@ const componentsRouter = [
     component: importView("video/index")
   },
   {
+    path: "/videoDetails",
+    name: "视频详情",
+    component: importView("video/videoDetails")
+  },
+  {
     path: "/answers",
-    name: "问答",
+    name: "提问列表",
     component: importView("answers/index")
+  },
+  {
+    path: "/wenda",
+    name: "问答",
+    component: importView("answers/wenda")
   },
   {
     path: "/resource",

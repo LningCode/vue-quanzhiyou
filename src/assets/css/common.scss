@@ -32,15 +32,54 @@ $color: red;
 a:hover {
   text-decoration: underline;
 }
+.marle-20 {
+  margin-left: 20px !important;
+}
+.marle-10 {
+  margin-right: 10px !important;
+}
 .martop-10 {
   margin-top: 10px !important;
+}
+.martop-15 {
+  margin-top: 15px !important;
+}
+.martop-20 {
+  margin-top: 20px !important;
+}
+.marbm-20 {
+  margin-bottom: 20px !important;
 }
 .martop-65 {
   margin-top: 65px !important;
 }
-.pad-lr-10{
+.marbm-65 {
+  margin-bottom: 65px !important;
+}
+.marbm-40 {
+  margin-bottom: 40px !important;
+}
+.padtop-65 {
+  padding-top: 65px !important;
+}
+.padtop-20 {
+  padding-top: 20px !important;
+}
+.padtop-45 {
+  padding-top: 45px !important;
+}
+.padbm-80 {
+  padding-bottom: 80px !important;
+}
+.pad-lr-10 {
   padding-left: 10px;
   padding-right: 10px;
+}
+.pot-re {
+  position: relative !important;
+}
+.pot-ab {
+  position: absolute !important;
 }
 .w-50 {
   width: 50% !important;
@@ -55,6 +94,13 @@ a:hover {
   max-width: 1000px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  min-width: 300px;
+}
+.wraper-pull {
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  min-width: 300px;
 }
 
 @media (min-width: 1200px) {

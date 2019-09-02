@@ -5,7 +5,6 @@
         <img width="80" src="../../assets/images/logo.png" alt />
       </router-link>
     </div>
-    <el-button class="message" type="info" icon="el-icon-message" circle></el-button>
     <div class="cen-auto">
       <h1 class="medium">使用Point，您可以查看数千个视频，电子书和课程。</h1>
       <div class="login-main">
@@ -139,16 +138,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.sign .message {
-  position: absolute;
-  bottom: 50px;
-  right: 80px;
-  width: 45px;
-  height: 45px;
-}
-.sign .message .el-icon-message {
-  font-size: 24px;
-}
 .sign {
   position: relative;
   height: 100%;

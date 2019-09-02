@@ -1,43 +1,75 @@
-.login-main .el-tabs__header {
-  width: 220px;
-  margin: 0 auto 30px auto;
+// 登录注册
+.login-main {
+  .el-tabs__header {
+    width: 220px;
+    margin: 0 auto 30px auto;
+  }
+  .el-tabs__item {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .el-input--small .el-input__inner {
+    height: 36px;
+    line-height: 36px;
+  }
+  .el-tabs__nav-wrap::after {
+    content: initial;
+  }
+  .el-button {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
 }
-.login-main .el-tabs__item {
-  font-size: 18px;
-  font-weight: bold;
+// 头部
+.headnav {
+  .menu-search {
+    .el-input--small .el-input__inner {
+      height: 36px;
+      line-height: 36px;
+    }
+    .el-input-group__prepend .el-input__inner {
+      width: 75px;
+    }
+  }
+  .input-with-select {
+    .el-input-group__append {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .el-input-group__prepend {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
 }
-.login-main .el-input--small .el-input__inner {
-  height: 36px;
-  line-height: 36px;
+// 标签列表
+.tagall {
+  .el-breadcrumb__item.active .el-breadcrumb__inner {
+    color: #8a4182;
+  }
+  .el-input__inner {
+    height: 38px;
+    line-height: 38px;
+  }
 }
-.login-main .el-tabs__nav-wrap::after {
-  content: initial;
+// 视频详情
+.details-ctn .el-collapse-item__header {
+  height: 60px;
+  line-height: 60px;
+  background: #f8f8f8;
+  padding-left: 15px;
+  padding-right: 5px;
+  .el-collapse-item__arrow {
+    font-size: 20px;
+  }
 }
-.login-main .el-button {
-  width: 100%;
-  margin-left: 0;
-  padding: 10px 15px;
-  font-size: 14px;
-}
-.headnav .menu-search .el-input--small .el-input__inner {
-  height: 36px;
-  line-height: 36px;
-}
-.headnav .input-with-select .el-input-group__append {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.headnav .input-with-select .el-input-group__prepend {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-.headnav .menu-search .el-input-group__prepend .el-input__inner {
-  width: 75px;
-}
-.tagall .el-breadcrumb__item.active .el-breadcrumb__inner {
-  color: #8a4182;
-}
-.tagall .el-input__inner {
-  height: 38px;
-  line-height: 38px;
+.course-related {
+  .textarea {
+    .el-textarea__inner {
+      height: 100px;
+      padding-top: 10px;
+    }
+  }
 }

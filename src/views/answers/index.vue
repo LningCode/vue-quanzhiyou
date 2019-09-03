@@ -5,7 +5,14 @@
         <el-input size="medium" placeholder="快速搜索想要知道的问题" v-model="formInline">
           <el-button slot="append" @click="onSubmit" icon="el-icon-search">搜索问题</el-button>
         </el-input>
-        <el-button class="marle-20" size="medium" type="primary" round icon="el-icon-question">我要提问</el-button>
+        <el-button
+          class="marle-20"
+          size="medium"
+          type="primary"
+          @click="dialogVisible = true"
+          round
+          icon="el-icon-question"
+        >我要提问</el-button>
       </el-container>
     </el-card>
 
@@ -62,7 +69,12 @@
       <el-aside class="martop-20 marbm-20 side-alert">
         <el-card shadow="never">
           <h3 class="title">试试提问你今天遇到的问题～</h3>
-          <el-button size="medium" class="side-btn" type="primary">我要提问</el-button>
+          <el-button
+            size="medium"
+            class="side-btn"
+            @click="dialogVisible = true"
+            type="primary"
+          >我要提问</el-button>
         </el-card>
 
         <el-card class="martop-20">
@@ -83,22 +95,72 @@
         </el-card>
       </el-aside>
     </el-container>
+
+    <el-dialog title="正在提问" :visible.sync="dialogVisible" width="60%" :before-close="handleClose">
+      <div class>
+        <el-form label-position="top">
+          <el-form-item size="medium">
+            <el-input placeholder="请在这里概述您的问题"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button size="medium">标签分类</el-button>
+            <el-select size="medium" v-model="value" placeholder="请选择">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              ></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="问题描述">
+            <quill-editor></quill-editor>
+          </el-form-item>
+        </el-form>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 import PagInation from "@/components/PagInation";
+import QuillEditor from "@/components/QuillEditor";
 export default {
   name: "AppAnswers",
   data() {
     return {
       formInline: "",
       activeIndex: "1",
-      slotTitle: "按时间排序"
+      slotTitle: "按时间排序",
+      dialogVisible: false,
+      options: [
+        {
+          value: "选项1",
+          label: "黄金糕"
+        },
+        {
+          value: "选项2",
+          label: "双皮奶"
+        },
+        {
+          value: "选项3",
+          label: "蚵仔煎"
+        },
+        {
+          value: "选项4",
+          label: "龙须面"
+        },
+        {
+          value: "选项5",
+          label: "北京烤鸭"
+        }
+      ],
+      value: ""
     };
   },
   components: {
-    PagInation
+    PagInation,
+    QuillEditor
   },
   methods: {
     onSubmit() {
@@ -110,14 +172,19 @@ export default {
     },
     selectSlot(name) {
       this.slotTitle = name;
+    },
+    handleClose(done) {
+      this.$confirm("确认关闭？")
+        .then(_ => {
+          done();
+        })
+        .catch(_ => {});
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-.form-search {
-}
 .side-main {
   padding-left: 0;
   .card-item {

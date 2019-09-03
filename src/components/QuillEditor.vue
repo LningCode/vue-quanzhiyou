@@ -6,7 +6,7 @@
     <div class="edit_container" v-if="!showEdit">
       <quill-editor
         v-model="content"
-        ref="myQuillEditor"
+        ref="QuillEditor"
         :options="editorOption"
         @blur="onEditorBlur($event)"
         @focus="onEditorFocus($event)"
@@ -56,9 +56,14 @@ export default {
     showHtml: Boolean,
     showEdit: Boolean,
     btnText: String,
-    btnSize: String
+    btnSize: String,
+    editHeight: Number
   },
-  computed: {},
+  computed: {
+    editor() {
+      return this.$refs.QuillEditor.quill;
+    }
+  },
   methods: {
     onEditorReady(editor) {
       console.log(editor);
@@ -70,6 +75,10 @@ export default {
     saveHtml: function(event) {
       console.log(this.content);
     }
+  },
+  mounted() {
+    // 设置编辑器高度
+    this.editor.container.style.height = `${this.editHeight || 200}px`;
   }
 };
 </script>

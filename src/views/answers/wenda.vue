@@ -28,6 +28,35 @@
         </article>
 
         <quill-editor class="padtop-65"></quill-editor>
+
+        <div class="replay-wrap padtop-65">
+          <el-card class="martop-20">
+            <div slot="header" class="clearfix">
+              <h2 class="section-tit">
+                最新回答
+                <span>(2条回答)</span>
+              </h2>
+            </div>
+            <div class="answer_item marbm-20">
+              <ul>
+                <li class="card-item" v-for="item in 5" :key="item">
+                  <router-link to="/author" class="author">
+                    <img src="../../assets/images/logo.png" alt />
+                  </router-link>
+                  <div class="card-content">
+                    <div class="card-abstract">13小时之前 回答</div>
+                    <h3 class="card-title">翻看文集，才发现来到简书已经一年了。 第一篇文章发表与20</h3>
+                    <div class="meta">
+                      <el-button type="mini" icon="el-icon-view">42赞同</el-button>
+                      <el-button type="mini" icon="el-icon-share">11反对</el-button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <pag-ination :total="20" :pageSize="5"></pag-ination>
+          </el-card>
+        </div>
       </el-main>
 
       <el-aside class="martop-20 marbm-20 side-alert">
@@ -133,6 +162,37 @@ export default {
     flex-direction: column;
     justify-content: center;
     min-width: 0;
+  }
+}
+.replay-wrap {
+  .section-tit {
+    margin: 0;
+    span {
+      color: #999;
+      font-size: 14px;
+      margin-left: 10px;
+      line-height: 14px;
+    }
+  }
+  .author {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin-right: 20px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .card-title {
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  .card-abstract {
+    margin-bottom: 8px;
+  }
+  .card-item {
+    padding: 15px 0;
   }
 }
 </style>
